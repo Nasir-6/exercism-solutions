@@ -1,2 +1,3 @@
 /node_modules
 /typescript/.DS_Store
+/typescript/*/node_modules
