@@ -3,6 +3,9 @@
 Welcome to Two Fer on Exercism's TypeScript Track.
 If you need help running the tests or submitting your code, check out `HELP.md`.
 
+## What I learnt 
+- ```name:string = "you"`` - use of default value here, removes the need to have a conditional print of a different string for when input is empty!!
+
 ## Instructions
 
 `Two-fer` or `2-fer` is short for two for one. One for you and one for me.
