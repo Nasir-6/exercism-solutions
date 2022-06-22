@@ -3,6 +3,11 @@
 Welcome to Resistor Color Trio on Exercism's TypeScript Track.
 If you need help running the tests or submitting your code, check out `HELP.md`.
 
+## What I learnt
+- ```as const``` - used to make the object const readonly - otherwise will be a mutable const! - USEFUL DURING COMPILE 
+- ```keyof typeof``` - used to collate the keys and create a type literal union of all of them - This can then be used to restrict types used to access the object!
+
+
 ## Instructions
 
 If you want to build something using a Raspberry Pi, you'll probably use _resistors_. For this exercise, you need to know only three things about them:
