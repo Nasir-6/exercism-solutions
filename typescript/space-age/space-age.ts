@@ -14,7 +14,7 @@ type planet = keyof typeof ORBITAL_PERIODS;
 export function age(planet: planet, seconds: number): number {
   // Convert seconds into earth years
   // 1 Earth year is 365.25 Earth days, or 31557600 seconds
-  let earthYears = seconds/ 31557600
+  let earthYears = seconds/ 31_557_600
 
   // Now convert into new planet years - give to 2dp 
   return parseFloat((earthYears / ORBITAL_PERIODS[planet]).toFixed(2))
