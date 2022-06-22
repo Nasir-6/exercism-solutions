@@ -3,6 +3,9 @@
 Welcome to DnD Character on Exercism's TypeScript Track.
 If you need help running the tests or submitting your code, check out `HELP.md`.
 
+## What I learnt
+- Reminder of how to make classes with properties, constructors and use static methods
+
 ## Instructions
 
 For a game of [Dungeons & Dragons][dnd], each player starts by generating a
