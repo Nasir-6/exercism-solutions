@@ -4,3 +4,5 @@ This is a repo containing my solutions to the Exercism problems. I normally use 
 
 ## Currently Reviewing/Learning: JavaScript/TypeScript
 
+[Exercism profile](https://exercism.org/profiles/Nasir-6)
+
