@@ -2,7 +2,7 @@ export class Matrix {
 
   myMatrix:string[][]
   constructor(matrix:string) {
-    let columns = matrix.split(/\r?\n/);
+    let columns = matrix.split(/\n/);
     let matrixArr = [];
     for( let i=0; i<columns.length; i++){
       matrixArr.push(columns[i].split(" "))
