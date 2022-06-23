@@ -11,7 +11,11 @@
  * @returns {number} time in minutes
  */
 export function timeToMixJuice(name) {
-  throw new Error('Please implement the timeToMixJuice function');
+  if(name === 'Pure Strawberry Joy') return 0.5
+  if(name === 'Energizer' || name === 'Green Garden') return 1.5
+  if(name === 'Tropical Island') return 3
+  if(name === 'All or Nothing') return 5
+  return 2.5
 }
 
 /**
