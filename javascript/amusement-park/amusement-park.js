@@ -38,7 +38,10 @@ export function revokeTicket(visitor) {
  * @returns {string} ticket status
  */
 export function ticketStatus(tickets, ticketId) {
-  throw new Error('Please implement the ticketStatus function.');
+  let ticketOwner = tickets[ticketId];
+  if(ticketOwner === undefined) return 'unknown ticket id';
+  if(ticketOwner === null) return 'not sold';
+  return `sold to ${ticketOwner}`
 }
 
 /**
