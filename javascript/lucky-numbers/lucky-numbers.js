@@ -20,7 +20,11 @@ export function twoSum(array1, array2) {
  * @returns {boolean}  whether the number is a palindrome or not
  */
 export function luckyNumber(value) {
-  throw new Error('Implement the luckyNumber function');
+  let numStr = String(value);
+  for(let i=0; i<numStr.length; i++){
+    if(numStr[i] != numStr[numStr.length-1-i]) return false;
+  }
+  return true
 }
 
 /**
