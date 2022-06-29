@@ -63,3 +63,19 @@ export function cookingStatus(timeLeft){
  export function addSecretIngredient(friendsList, myList){
     myList.push(friendsList[friendsList.length-1])
 }
+
+
+/**
+ *
+ * @param {object} recipe
+ * @param {number} numberOfPortions
+ * @returns {object} recipie with desired portions
+ */
+ export function scaleRecipe(recipe, numberOfPortions){
+    let scaleFactor = numberOfPortions/2;
+    let scaledRecipe = {}
+    for(const ingredient in recipe){
+        scaledRecipe[ingredient] = recipe[ingredient] * scaleFactor;
+    } 
+    return scaledRecipe;
+}
