@@ -53,3 +53,13 @@ export function cookingStatus(timeLeft){
     return quantities
 }
 
+
+
+/**
+ *
+ * @param {string[]} friendsList
+ * @param {string[]} myList
+ */
+ export function addSecretIngredient(friendsList, myList){
+    myList.push(friendsList[friendsList.length-1])
+}
