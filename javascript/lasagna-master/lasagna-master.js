@@ -11,6 +11,11 @@
  * }
  */
 
+/**
+ *
+ * @param {number|undefined} timeLeft
+ * @returns {string} error message
+ */
 export function cookingStatus(timeLeft){
     if(timeLeft === 0) return 'Lasagna is done.'
     if(timeLeft === undefined) return 'You forgot to set the timer.'
