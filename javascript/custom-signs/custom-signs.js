@@ -54,5 +54,6 @@ Class of ${year}`
  */
 
 export function costOf(sign, currency) {
-  throw new Error('Implement the costOf function');
+  let price = 20 + (2*sign.length)
+  return `Your sign costs ${price}.00 ${currency}.`
 }
