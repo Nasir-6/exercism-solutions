@@ -26,7 +26,7 @@ export function buildSign(occasion, name) {
  */
 
 export function buildBirthdaySign(age) {
-  throw new Error('Implement the buildBirthdaySign function');
+  return age >= 50 ? `Happy Birthday! What a mature fellow you are.` : `Happy Birthday! What a young fellow you are.`
 }
 
 /**
