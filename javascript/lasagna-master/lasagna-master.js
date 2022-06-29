@@ -21,3 +21,14 @@ export function cookingStatus(timeLeft){
     if(timeLeft === undefined) return 'You forgot to set the timer.'
     return 'Not done, please wait.'
 }
+
+
+/**
+ *
+ * @param {string[]} layers
+ * @param {number|undefined} avgTimeForEachLayer
+ * @returns {number} total prep time
+ */
+ export function preparationTime(layers, avgTimeForEachLayer = 2){
+    return layers.length * avgTimeForEachLayer
+}
