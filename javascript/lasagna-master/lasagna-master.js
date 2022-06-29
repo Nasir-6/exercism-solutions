@@ -32,3 +32,24 @@ export function cookingStatus(timeLeft){
  export function preparationTime(layers, avgTimeForEachLayer = 2){
     return layers.length * avgTimeForEachLayer
 }
+
+/**
+ *
+ * @param {string[]} layers
+ * @returns {{noodles, sauce}} object containing quantaties for noodle and sauce
+ */
+ export function quantities(layers){
+    let quantities = {
+        noodles: 0,
+        sauce: 0
+    }
+    for(let i=0; i<layers.length; i++){
+        if(layers[i] === 'noodles'){
+            quantities.noodles = quantities.noodles + 50
+        } else if (layers[i] === 'sauce'){
+            quantities.sauce = quantities.sauce + 0.2
+        }
+    }
+    return quantities
+}
+
