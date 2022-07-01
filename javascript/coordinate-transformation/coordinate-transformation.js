@@ -59,5 +59,23 @@ export function composeTransform(f, g) {
  *  if the arguments are the same on subsequent calls, or compute a new result if they are different.
  */
 export function memoizeTransform(f) {
-  throw new Error('Implement the memoizeTransform function');
+  // Since this is outside the blockscope of the function adn uses "let" the state is saved 
+  // It can then be updated inside the returned function below!!
+  let cache = {};
+
+  return (x,y) => {
+    let cacheKey = `${x}AND${y}`
+    if (cacheKey in cache) {
+      console.log('Fetching from cache');
+      return cache[cacheKey];
+    }
+    else {
+      cache = {}; // Empty Cache so only remembers last result
+      console.log('Calculating new result and storing in Cache');
+      let result = f(x,y);
+      cache[cacheKey] = result;
+      return result;
+    }
+  }
+  
 }
