@@ -29,7 +29,7 @@ export function translate2d(dx, dy) {
  *  scaled coordinate pair in the form [x, y]
  */
 export function scale2d(sx, sy) {
-  return function (){return "hello"}
+  return function (x,y){return [x * sx, y * sy]}
 }
 
 /**
