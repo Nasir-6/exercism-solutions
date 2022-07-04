@@ -66,10 +66,12 @@ export function doesStackIncludeOddCard(stack) {
  *
  * @param {number[]} stack
  *
- * @returns {number} the first odd value
+ * @returns {number | undefined} the first odd value
  */
 export function getFirstOddCard(stack) {
-  throw new Error('Implement the getFirstOddCard function');
+  for(let i=0; i<stack.length; i++){
+    if(stack[i] % 2 != 0) return stack[i]
+  }
 }
 
 /**
