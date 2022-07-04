@@ -36,6 +36,8 @@ export function onError() {
  */
 export function orderFromGrocer(query, onSuccessCallback, onErrorCallback) {
   // implement the orderFromGrocer function to order the query
+  // Wrap the order reqeust in a function called orderFromGrocer - to insulate the "order" codebase from any external changes!!
+   order(query, onSuccessCallback, onErrorCallback)
 }
 
 /**
