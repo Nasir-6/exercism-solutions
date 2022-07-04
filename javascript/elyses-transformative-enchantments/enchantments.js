@@ -53,11 +53,10 @@ export function middleTwo(deck) {
 
 export function sandwichTrick(deck) {
   // grab the first and last card
-  let outSideCards = []; 
-  outSideCards.push(deck.splice(0,1)[0])
-  outSideCards.push(deck.splice(-1,1)[0])
+  let firstCard = deck.shift();
+  let lastCard = deck.pop();
   // Now shove them back in the middle in rev order
-  deck.splice(deck.length/2, 0, outSideCards[1], outSideCards[0]);
+  deck.splice(deck.length/2, 0, lastCard, firstCard);
   return deck;
 }
 
