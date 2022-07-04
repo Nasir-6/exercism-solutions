@@ -18,3 +18,16 @@ export class Size {
     }
     
 }
+
+
+export class Position {
+    constructor(x=0, y=0){
+        this.x = x;
+        this.y = y;
+    }
+
+    move(newX,newY){
+        this.x = newX;
+        this.y = newY;
+    }
+}
