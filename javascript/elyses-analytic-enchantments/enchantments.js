@@ -25,9 +25,7 @@ export function getCardPosition(stack, card) {
  * @returns {boolean} true if card is in the stack, false otherwise
  */
 export function doesStackIncludeCard(stack, card) {
-  const index = stack.indexOf(card);
-  if(index === -1) return false;
-  return true;
+  return stack.includes(card);
 }
 
 /**
@@ -38,12 +36,7 @@ export function doesStackIncludeCard(stack, card) {
  * @returns {boolean} true if all cards are even, false otherwise
  */
 export function isEachCardEven(stack) {
-  let isEven = true;
-  stack.forEach(card => {
-    if(card%2 != 0) isEven = false;
-  });
-  return isEven;
-  
+  return stack.every(card => card%2 === 0);
 }
 
 /**
@@ -54,11 +47,8 @@ export function isEachCardEven(stack) {
  * @returns {boolean} true if the array contains odd card, false otherwise
  */
 export function doesStackIncludeOddCard(stack) {
-  let hasOdd = false;
-  stack.forEach(card => {
-    if(card%2 != 0) hasOdd = true;
-  });
-  return hasOdd;
+  // card % 2 != 0 COULD DO this as statement  filter but card%2 also works as 0 is false - all others are truthy!!
+  return stack.some(card => card % 2)
 }
 
 /**
@@ -69,10 +59,8 @@ export function doesStackIncludeOddCard(stack) {
  * @returns {number | undefined} the first odd value
  */
 export function getFirstOddCard(stack) {
-  // IMPORTANT NOTE: DONT use foreach loop as that is a function and it makes it difficult to break/return out of it!!
-  for(let i=0; i<stack.length; i++){
-    if(stack[i] % 2 != 0) return stack[i]
-  }
+  // card % 2 != 0 COULD DO this as statement  filter but card%2 also works as 0 is false - all others are truthy!!
+  return stack.find(card => card % 2)
 }
 
 /**
@@ -83,8 +71,5 @@ export function getFirstOddCard(stack) {
  * @returns {number} position of the first card that is even
  */
 export function getFirstEvenCardPosition(stack) {
-  for(let i=0; i<stack.length; i++){
-    if(stack[i] % 2 === 0) return i;
-  }
-  return -1;
+  return stack.findIndex(card => card % 2 === 0)
 }
