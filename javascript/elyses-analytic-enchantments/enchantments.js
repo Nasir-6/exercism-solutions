@@ -38,7 +38,12 @@ export function doesStackIncludeCard(stack, card) {
  * @returns {boolean} true if all cards are even, false otherwise
  */
 export function isEachCardEven(stack) {
-  throw new Error('Implement the isEachCardEven function');
+  let isEven = true;
+  stack.forEach(card => {
+    if(card%2 != 0) isEven = false;
+  });
+  return isEven;
+  
 }
 
 /**
