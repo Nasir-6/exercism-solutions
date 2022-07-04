@@ -69,6 +69,7 @@ export function doesStackIncludeOddCard(stack) {
  * @returns {number | undefined} the first odd value
  */
 export function getFirstOddCard(stack) {
+  // IMPORTANT NOTE: DONT use foreach loop as that is a function and it makes it difficult to break/return out of it!!
   for(let i=0; i<stack.length; i++){
     if(stack[i] % 2 != 0) return stack[i]
   }
@@ -82,5 +83,8 @@ export function getFirstOddCard(stack) {
  * @returns {number} position of the first card that is even
  */
 export function getFirstEvenCardPosition(stack) {
-  throw new Error('Implement the getFirstEvenCardPosition function');
+  for(let i=0; i<stack.length; i++){
+    if(stack[i] % 2 === 0) return i;
+  }
+  return -1;
 }
